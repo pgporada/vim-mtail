@@ -20,10 +20,10 @@ syn region mtailDecorator start="^def.*" end="\( {$\)\@=" contains=mtailWordsCon
 
 syn region mtailDecoratedAction start="^@.*\s" end="\({$\)\@="
 
-syn match mtailGetFilename "getfilename()" contains=@mtailOperators
-syn region mtailSetTime start="settime[\s]*(" end=")\(.*$\)\@=" contains=@mtailOperators
-syn region mtailStrpTime start="strptime[\s]*(" end=")\(.*$\)\@=" contains=@mtailOperators
-syn match mtailTimestamp "timestamp(.*)" contains=@mtailOperators
+syn match mtailGetFilename "getfilename()" contains=@mtailOperators,mtailVar
+syn region mtailSetTime start="settime[\s]*(" end=")\(.*$\)\@=" contains=@mtailOperators,mtailVar
+syn region mtailStrpTime start="strptime[\s]*(" end=")\(.*$\)\@=" contains=@mtailOperators,mtailVar
+syn match mtailTimestamp "timestamp(.*)" contains=@mtailOperators,mtailVar
 
 syn match mtailVar "\$\w\+"
 
